@@ -57,13 +57,17 @@
     .kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
     .kpi .card{text-align:center}
     .kpi .num{font-weight:800;font-size:20px;color:var(--accent)}
-    .apps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
-    .app-card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px;text-align:center;transition:all 0.3s}
+    .apps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+    .app-card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px;transition:all 0.3s;display:flex;flex-direction:column;min-height:140px;text-align:center}
+    .app-card.clickable{cursor:pointer;text-decoration:none;color:inherit}
     .app-card:hover{border-color:var(--accent);transform:translateY(-2px)}
-    .app-icon{width:60px;height:60px;background:var(--accent);border-radius:12px;display:grid;place-items:center;margin:0 auto 12px;font-size:24px;color:#fff}
-    .app-stats{display:flex;justify-content:space-between;margin-top:8px;font-size:12px}
+    .app-card.clickable:hover{text-decoration:none;color:inherit}
+    .app-card h3{margin:0 0 8px 0;font-size:16px}
+    .app-card .muted{margin-bottom:auto}
+    .app-stats{display:flex;justify-content:space-between;font-size:12px;margin-top:16px}
     .stat{text-align:center}
-    .stat-num{font-weight:700;color:var(--accent)}
+    .stat-num{font-weight:700;color:var(--accent);display:block}
+    .stat .muted{font-size:11px}
     footer{color:var(--muted);text-align:center;margin:28px 0}
     .hidden{display:none !important}
 
@@ -120,39 +124,35 @@
       <main>
         <section>
           <h2 data-ru="О себе" data-en="About Me">О себе</h2>
-          <p data-ru="Android разработчик с 2.5+ годами коммерческого опыта в создании высококачественных мобильных приложений. Работаю с современным стеком технологий: Kotlin, Jetpack Compose, KMM и Clean Architecture. Имею опыт разработки финтех решений, работы с высоконагруженными системами (1M+ пользователей) и успешного рефакторинга legacy проектов.
-
-Фокусируюсь на написании чистого, поддерживаемого кода с применением лучших практик Android разработки. Умею находить оптимальные решения для сложных технических задач и эффективно работать в команде над достижением бизнес-целей." data-en="Android developer with 2.5+ years of commercial experience in creating high-quality mobile applications. I work with modern technology stack: Kotlin, Jetpack Compose, KMM, and Clean Architecture. I have experience in fintech solutions development, working with high-load systems (1M+ users) and successful legacy project refactoring.
-
-I focus on writing clean, maintainable code applying Android development best practices. I can find optimal solutions for complex technical tasks and work effectively in a team to achieve business goals.">Android разработчик с 2.5+ годами коммерческого опыта в создании высококачественных мобильных приложений. Работаю с современным стеком технологий: Kotlin, Jetpack Compose, KMM и Clean Architecture. Имею опыт разработки финтех решений, работы с высоконагруженными системами (1M+ пользователей) и успешного рефакторинга legacy проектов.
-
-Фокусируюсь на написании чистого, поддерживаемого кода с применением лучших практик Android разработки. Умею находить оптимальные решения для сложных технических задач и эффективно работать в команде над достижением бизнес-целей.</p>
-          <div class="stack" aria-label="Ключевые навыки">
-            <span class="chip">Kotlin</span><span class="chip">Jetpack Compose</span><span class="chip">KMM</span>
-            <span class="chip">REST API</span><span class="chip">MVI/MVVM</span><span class="chip">Clean Architecture</span>
-            <span class="chip">Firebase</span><span class="chip">Fintech</span><span class="chip">Performance</span>
-          </div>
+          <p data-ru="Android-разработчик с опытом 2.5+ года. Разрабатывал и поддерживал мобильные приложения: внедрял новые функции, исправлял баги, занимался рефакторингом. Работал с Kotlin, Jetpack Compose, KMM, GraphQL, Firebase, Retrofit и Room. Опыт работы с архитектурными паттернами и многомодульностью, такими как MVVM, MVI, MVP и Clean Architecture. Разрабатывал приложения в сферах: fintech, foodtech, курьерские сервисы, ритейл, marketplace и traveltech." data-en="Android developer with 2.5+ years of experience. Developed and maintained mobile applications: implemented new features, fixed bugs, performed refactoring. Worked with Kotlin, Jetpack Compose, KMM, GraphQL, Firebase, Retrofit and Room. Experience with architectural patterns and multi-module structure, such as MVVM, MVI, MVP and Clean Architecture. Developed applications in areas: fintech, foodtech, delivery services, retail, marketplace and traveltech.">Android-разработчик с опытом 2.5+ года. Разрабатывал и поддерживал мобильные приложения: внедрял новые функции, исправлял баги, занимался рефакторингом. Работал с Kotlin, Jetpack Compose, KMM, GraphQL, Firebase, Retrofit и Room. Опыт работы с архитектурными паттернами и многомодульностью, такими как MVVM, MVI, MVP и Clean Architecture. Разрабатывал приложения в сферах: <strong>fintech, foodtech, курьерские сервисы, ритейл, marketplace, traveltech</strong>.</p>
         </section>
 
         <section>
           <h2 data-ru="Технические навыки" data-en="Technical Skills">Технические навыки</h2>
           <div class="stack">
             <span class="chip">Kotlin</span><span class="chip">Java</span>
-            <span class="chip">Jetpack Compose</span><span class="chip">XML UI</span>
-            <span class="chip">Android SDK</span><span class="chip">Kotlin Multiplatform (KMM)</span>
-            <span class="chip">MVVM</span><span class="chip">MVI</span><span class="chip">MVP</span>
-            <span class="chip">Clean Architecture</span><span class="chip">SOLID, DRY, KISS</span>
-            <span class="chip">Kotlinx Coroutines</span><span class="chip">Flow</span>
-            <span class="chip">Retrofit2</span><span class="chip">OkHttp</span>
-            <span class="chip">Room Database</span><span class="chip">DataStore</span>
+            <span class="chip">XML</span><span class="chip">Jetpack Compose</span>
             <span class="chip">Hilt</span><span class="chip">Koin</span>
-            <span class="chip">Firebase Analytics</span><span class="chip">Firebase FCM</span><span class="chip">Firebase Auth</span>
-            <span class="chip">Navigation Component</span><span class="chip">Paging 3</span>
-            <span class="chip">LiveData</span><span class="chip">ViewModel</span>
-            <span class="chip">Gradle (Groovy, Kotlin)</span><span class="chip">buildSrc</span>
-            <span class="chip">Version Catalog</span><span class="chip">Google Play Console</span>
-            <span class="chip">Google Maps</span><span class="chip">Git</span>
-            <span class="chip">Security (EncryptedSharedPreferences, Biometrics API)</span>
+            <span class="chip">Retrofit2</span><span class="chip">OkHttp</span>
+            <span class="chip">Kotlinx Coroutines</span><span class="chip">Flow</span><span class="chip">Channels</span>
+            <span class="chip">Clean Architecture</span><span class="chip">MVVM</span><span class="chip">MVI</span>
+            <span class="chip">Navigation Component</span>
+            <span class="chip">Room</span>
+            <span class="chip">Firebase Analytics</span><span class="chip">FCM</span><span class="chip">Firebase Auth</span><span class="chip">Firestore</span>
+            <span class="chip">LiveData</span><span class="chip">ViewModel</span><span class="chip">WorkManager</span><span class="chip">Paging3</span><span class="chip">DataStore</span>
+            <span class="chip">Gradle (Groovy/KTS)</span><span class="chip">buildSrc</span><span class="chip">Version Catalog</span>
+            <span class="chip">Dynamic Feature Modules</span><span class="chip">Modularization</span>
+            <span class="chip">Crashlytics</span><span class="chip">Timber</span>
+            <span class="chip">Google Maps API</span><span class="chip">GPS</span><span class="chip">Location Provider</span>
+            <span class="chip">GitLab CI</span><span class="chip">GitHub Actions</span>
+            <span class="chip">Sentry</span>
+            <span class="chip">Google Play Billing</span><span class="chip">In-App Purchases</span>
+            <span class="chip">Google Cloud</span><span class="chip">Cloud Functions</span>
+            <span class="chip">Google Analytics</span>
+            <span class="chip">KMM</span><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">GitLab</span><span class="chip">BitBucket</span>
+            <span class="chip">Kapt</span><span class="chip">KSP</span><span class="chip">Annotation Processors</span>
+            <span class="chip">Dokka</span><span class="chip">KDoc</span>
+            <span class="chip">Google Play Console</span>
           </div>
         </section>
 
@@ -162,11 +162,12 @@ I focus on writing clean, maintainable code applying Android development best pr
             <h3 data-ru="Android Developer & KMM — Optima Bank" data-en="Android Developer & KMM — Optima Bank">Android Developer & KMM — Optima Bank</h3>
             <div class="row"><span class="pill">Kotlin • Compose • KMM • Fintech</span><span class="pill" data-ru="Ноябрь 2024 — наст.вр." data-en="November 2024 — Present">Ноябрь 2024 — наст.вр.</span></div>
             <ul class="list">
-              <li data-ru="Разработка мобильного банкинга с нуля на Kotlin Multiplatform Mobile (KMM) для iOS и Android платформ" data-en="Developed mobile banking from scratch using Kotlin Multiplatform Mobile (KMM) for iOS and Android platforms">Разработка мобильного банкинга с нуля на Kotlin Multiplatform Mobile (KMM) для iOS и Android платформ</li>
-              <li data-ru="Создание архитектуры финтех приложения: многомодульная структура, бизнес-логика, интеграция с банковскими API" data-en="Created fintech app architecture: multi-module structure, business logic, banking API integration">Создание архитектуры финтех приложения: многомодульная структура, бизнес-логика, интеграция с банковскими API</li>
-              <li data-ru="Реализация критически важных финансовых операций: переводы, платежи, история транзакций с высоким уровнем безопасности" data-en="Implementation of critical financial operations: transfers, payments, transaction history with high security level">Реализация критически важных финансовых операций: переводы, платежи, история транзакций с высоким уровнем безопасности</li>
-              <li data-ru="Внедрение современных подходов к UI/UX: Jetpack Compose, Material Design 3, адаптивный дизайн" data-en="Implemented modern UI/UX approaches: Jetpack Compose, Material Design 3, adaptive design">Внедрение современных подходов к UI/UX: Jetpack Compose, Material Design 3, адаптивный дизайн</li>
-              <li data-ru="Настройка CI/CD процессов и автоматизированного тестирования для стабильных релизов" data-en="Set up CI/CD processes and automated testing for stable releases">Настройка CI/CD процессов и автоматизированного тестирования для стабильных релизов</li>
+              <li data-ru="Разрабатывал приложение на Kotlin Multiplatform Mobile (KMM) для iOS и Android" data-en="Developed application using Kotlin Multiplatform Mobile (KMM) for iOS and Android">Разрабатывал приложение на Kotlin Multiplatform Mobile (KMM) для iOS и Android</li>
+              <li data-ru="Разрабатывал новые фичи и дорабатывал существующий функционал" data-en="Developed new features and enhanced existing functionality">Разрабатывал новые фичи и дорабатывал существующий функционал</li>
+              <li data-ru="Исправлял баги и повышал стабильность приложений" data-en="Fixed bugs and improved application stability">Исправлял баги и повышал стабильность приложений</li>
+              <li data-ru="Проводил код-ревью и участвовал в улучшении качества кода" data-en="Conducted code reviews and participated in code quality improvement">Проводил код-ревью и участвовал в улучшении качества кода</li>
+              <li data-ru="Работал с многомодульным проектом и KMM" data-en="Worked with multi-module project and KMM">Работал с многомодульным проектом и KMM</li>
+              <li data-ru="Создавал UI на Jetpack Compose и адаптировал под разные устройства" data-en="Created UI with Jetpack Compose and adapted for different devices">Создавал UI на Jetpack Compose и адаптировал под разные устройства</li>
             </ul>
           </div>
           <div class="item">
